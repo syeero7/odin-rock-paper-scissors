@@ -1,19 +1,24 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
   let comChoice = Math.floor(Math.random() * 3);
   if (comChoice === 0) {
-    return "Rock";
+    return "rock";
   } else if (comChoice === 1) {
-    return "Paper";
+    return "paper";
   } else {
-    return "Scissors";
+    return "scissors";
   }
 }
 
 function getHumanChoice() {
-  let choice = prompt("Rock, Paper or Scissors ?");
-  if (choice === "Rock" || choice === "Paper" || choice === "Scissors") {
+  let choice = prompt("Rock, Paper or Scissors ?").toLowerCase();
+  if (choice === "rock" || choice === "paper" || choice === "scissors") {
     return choice;
   } else {
-    return alert("Please choose one option: rock, paper, or scissors?");
+    return alert(
+      "Please enter one of the following options: rock, paper or scissors",
+    );
   }
 }
