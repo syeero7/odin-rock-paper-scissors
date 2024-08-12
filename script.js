@@ -1,6 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
@@ -67,4 +64,15 @@ function playGame() {
   } else {
     console.log(`You Won! Score: ${humanScore}`);
   }
+  startGame();
 }
+
+function startGame() {
+  setTimeout(() => {
+    if (confirm("Do you want to start a new game?")) {
+      playGame();
+    }
+  }, 1200);
+}
+
+startGame();
