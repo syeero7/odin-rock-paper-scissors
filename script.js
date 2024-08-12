@@ -72,7 +72,7 @@ function startGame() {
     if (confirm("Do you want to start a new game?")) {
       playGame();
     }
-  }, 1200);
+  }, 2500);
 }
 
 startGame();
