@@ -8,3 +8,12 @@ function getComputerChoice() {
     return "Scissors";
   }
 }
+
+function getHumanChoice() {
+  let choice = prompt("Rock, Paper or Scissors ?");
+  if (choice === "Rock" || choice === "Paper" || choice === "Scissors") {
+    return choice;
+  } else {
+    return alert("Please choose one option: rock, paper, or scissors?");
+  }
+}
