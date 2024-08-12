@@ -2,7 +2,10 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playGame() {
+  let humanScore = 0;
+  let computerScore = 0;
   let rounds = 0;
+
   for (rounds; rounds < 5; rounds++) {
     function playRound(humanChoice, computerChoice) {
       if (humanChoice === "rock" && computerChoice === "paper") {
@@ -56,5 +59,12 @@ function playGame() {
       }
     }
     playRound(humanSelection, computerSelection);
+  }
+  if (computerScore === humanScore) {
+    console.log(`It's a tie! computer: ${computerScore} your: ${humanScore}`);
+  } else if (computerScore > humanScore) {
+    console.log(`The computer Won! Score: ${computerScore}`);
+  } else {
+    console.log(`You Won! Score: ${humanScore}`);
   }
 }
