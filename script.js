@@ -73,6 +73,29 @@ btn.addEventListener("click", (e) => {
       playerChoice = "scissors";
       break;
   }
+
   playGame();
+  showWinner();
   result.appendChild(playerResult);
 });
+
+function showWinner() {
+  if (computerScore < 5) {
+    computer.textContent = `Computer: ${computerScore}`;
+  } else if (computerScore === 5) {
+    player.textContent = "";
+    computer.textContent = `The computer Won! Score: ${computerScore}`;
+  }
+
+  if (humanScore < 5) {
+    player.textContent = `Player: ${humanScore}`;
+  } else if (humanScore === 5) {
+    computer.textContent = "";
+    player.textContent = `You Won! Score: ${humanScore}`;
+  }
+
+  if (computerScore === 5 || humanScore === 5) {
+    computerScore = 0;
+    humanScore = 0;
+  }
+}
